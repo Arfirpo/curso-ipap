@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Procesamiento</title>
+</head>
+<body>
+    <form action="./procesar.php" method="post">
+        <div class="form__name">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+        <div class="form__lastname">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido">
+        </div>
+        <div class="form__study-level">
+            <label for="nivel-estudios">Estudios:</label>
+            <select name="nivel-estudios" id="nivel-estudios">
+                <option value="1">Primario</option>
+                <option value="2">Secundario</option>
+                <option value="3">Terciario</option>
+            </select>
+        </div>
+        
+        <div class="form__coments">
+            <label for="comentarios">Comentarios:</label>
+            <textarea name="comentarios" id="comentarios" cols="10" rows="5" placeholder="Escribe un comentario..."></textarea>
+        </div>
+
+        <button type="submit" class="form__button">Guardar</button>
+    </form>
+</body>
+</html>
