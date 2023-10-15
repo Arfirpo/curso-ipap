@@ -3,23 +3,55 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./assets/css/styles.css">
-        <title>Procesamiento</title>
+        <link rel="stylesheet" href="./assets/css/estilos.css">
+        <title>Calculadora-Resultados</title>
     </head>
     <body>
-        <?php 
-            $nombre = ucfirst($_POST["nombre"]);
-            $apellido = ucfirst($_POST["apellido"]);
-            $nivel = ucfirst($_POST["nivel-estudios"]);
-            $comentario = $_POST["comentarios"];
-        ?>
-        <main class="page-container">
-            <h1 class="page__welcome">Bienvenido <?= $nombre ?> <?= $apellido ?>!</h1>
-            <p class="page__study-level">Tu nivel de estudios es: <?= $nivel ?></p>
-            <p class="page__coment">Comentaste: <?=$comentario?></p>
-            <button type="submit" class="page__button">
-                <a href="./clase-3.html">Volver al formulario</a>
-            </button>
-        </main>
+        <div class="container">
+            <header>
+                <!-- banner provincia -->
+                <img class="header__banner" src="./assets/imagenes/banner.png" alt="">
+                <!-- titulo -->
+                <h1 class="header__title">Resultados</h1>
+            </header>
+            <main class="form-container">
+                <div class="card">
+                    <p class="result">
+                        <?php
+                            $num1 = intval($_POST["value1"]);
+                            $num2 = intval($_POST["value2"]);
+                            $operacion = $_POST["operation"];
+                            switch($operacion){
+                                case "+":
+                                    $resultado = $num1 + $num2;
+                                    $opr = "suma";
+                                    break;
+                                case "-":
+                                    $resultado = $num1 - $num2;
+                                    $opr = "resta";
+                                    break;
+                                case "*":
+                                    $resultado = $num1 * $num2;
+                                    $opr = "multiplicación";
+                                    break;
+                                case "/":
+                                    $resultado = $num1 / $num2;
+                                    $opr = "división";
+                                    break;
+                                default: echo("la operación no existe");
+                            };
+                        ?>
+                        El resultado de tu <span><?= $opr ?></span> entre <span><?=$num1 ?></span> y <span><?=$num2 ?></span> es: <span class="result__number"><?= $resultado ?></span>
+                    </p>
+                    <button type="submit" class="page__button">
+                    <a href="./clase-3.html">Volver a calculadora</a>
+                    </button>
+                </div>
+            </main>
+            <footer>
+                <p>Autor: Firpo Agustín</p>
+                <p><?php echo date('Y-m-d'); ?></p>
+        </footer>
+        </div>
     </body>
 </html>
