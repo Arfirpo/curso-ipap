@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/estilos.css">
-    <title>Calculadora-Formulario</title>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <!-- banner provincia -->
-            <img class="header__banner" src="./assets/imagenes/banner.png" alt="">
-            <!-- titulo -->
-            <h1 class="header__title">Calculadora</h1>
-        </header>
-        <main class="form-container">
-            <!-- formulario -->
-            <form class="card" action="./procesar.php" method="post">
-        
-                <!-- input valor 1 -->
-                <div class="form__value">
-                    <label for="value1">Número:</label>
-                    <input type="text" id="value1" name="value1" required>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/estilos.css">
+        <title>Calculadora-Formulario</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <!-- banner provincia -->
+                <img class="header__banner" src="./assets/imagenes/banner.png" alt="">
+                <!-- titulo -->
+                <h1 class="header__title">Calculadora</h1>
+            </header>
+            <main class="form-container">
+                <!-- formulario -->
+                <form class="card" action="./procesar.php" method="post">
+                    <!-- input valor 1 -->
+                    <div class="form__value">
+                        <label for="value1">Número:</label>
+                        <input type="text" id="value1" name="value1" required>
+                    </div>
+                    <!-- input operación -->
+                    <div class="form__operations">
+                        <label for="operation">Operación:</label>
+                        <select name="operation" id="operation">
+                            <option value="+">Suma</option>
+                            <option value="-">Resta</option>
+                            <option value="*">Multiplicación</option>
+                            <option value="/">División</option>
+                        </select>
+                    </div>
+                    <!-- input valor 2 -->
+                    <div class="form__value">
+                        <label for="value2">Número:</label>
+                        <input type="text" id="value2" name="value2" required>
+                    </div>
+                    <!-- boton calcular -->
+                    <button type="submit" class="form__button">Calcular</button>
+                </form>
+            </main>
+            <footer>
+                <div class="footer__text">
+                    <p class="autor">Autor: Firpo Agustín</p>
+                    <p><span id="fecha-actual"></span></p>
                 </div>
-                <!-- input operación -->
-                <div class="form__operations">
-                    <label for="operation">Operación:</label>
-                    <select name="operation" id="operation">
-                        <option value="+">Suma</option>
-                        <option value="-">Resta</option>
-                        <option value="*">Multiplicación</option>
-                        <option value="/">División</option>
-                    </select>
-                </div>
-                <!-- input valor 2 -->
-                <div class="form__value">
-                    <label for="value2">Número:</label>
-                    <input type="text" id="value2" name="value2" required>
-                </div>
-                <!-- boton calcular -->
-                <button type="submit" class="form__button">Calcular</button>
-            </form>
-        </main>
-        <footer>
-            <div class="footer__text">
-                <p class="autor">Autor: Firpo Agustín</p>
-                <p><span id="fecha-actual"></span></p>
-            </div>
-        </footer>
-        <script src="./assets/js/main.js"></script>
-    </div>
-</body>
+            </footer>
+            <script src="./assets/js/main.js"></script>
+        </div>
+    </body>
 </html>
