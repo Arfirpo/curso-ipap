@@ -50,7 +50,7 @@
             </main>
             <footer>
                 <p>Autor: Firpo Agustín</p>
-                <p><?php echo date('Y-m-d'); ?></p>
+                <p id="fecha-actual"><?php echo date('Y-m-d'); ?></p>
         </footer>
         </div>
     </body>

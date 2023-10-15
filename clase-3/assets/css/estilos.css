@@ -16,6 +16,7 @@ body{
 .container{
     width: 375px;
     height: 768px;
+    margin: 0 auto;
 }
 
 header{
@@ -48,7 +49,7 @@ header{
 }
 
 .card{
-    background-color: rgba(251, 247, 247, 0.698);
+    background-color: rgba(10, 10, 10, 0.446);
     width: 250px;
     height: 200px;
     padding: 10px;
@@ -70,13 +71,13 @@ header{
     justify-content: space-between;
 }
 
-input,
-select{
+input{
     width: 140px;
     background-color: rgba(255, 254, 254, 0.375);
     border: none;
     text-align: justify;
     font-size: 16px;
+    color: #ffffff;
     padding: 2px 0 0 5px;
     &:focus{
         outline: none
@@ -84,9 +85,19 @@ select{
 }
 
 label{
-    color: #000;
+    color: #ffffff;
     font-weight:bolder;
     font-size: 18px;
+}
+
+select{
+    width: 140px;
+    background-color: rgba(255, 254, 254, 0.375);
+    text-align: center;
+    color: #fff;
+}
+option{
+    color: #000;
 }
 .form__button,
 .page__button{
@@ -128,13 +139,14 @@ footer{
     width: 90%;
     height: 150px;
     margin: 0 auto;
+    color: #ffffff;
     letter-spacing: .9px;
     font-size: 23px;
     font-weight: bold;
     text-align: center;
     & span,
     .result__number{
-        color: #009aae;
+        color: #fff200;
     }
     & .result__number{
         display: block;
