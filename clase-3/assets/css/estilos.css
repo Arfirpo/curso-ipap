@@ -202,7 +202,7 @@ footer{
         font-size: 45px;
     }
     @media (min-width:768px) {
-        font-size: 45px;
+        font-size: 36px;
         margin: 0 auto 45px;
         & .result__number{
             font-size: 80px;
