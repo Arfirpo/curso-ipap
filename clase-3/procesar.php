@@ -44,7 +44,7 @@
                         El resultado de tu <span><?= $opr ?></span> entre <span><?=$num1 ?></span> y <span><?=$num2 ?></span> es: <span class="result__number"><?= $resultado ?></span>
                     </p>
                     <button type="submit" class="page__button">
-                    <a href="./clase-3.html">Volver a calculadora</a>
+                    <a href="./clase-3.html">Volver</a>
                     </button>
                 </div>
             </main>
